@@ -8,40 +8,40 @@ npoker <- function(a = 2, b = 1, p = b/(a+b), q = b/(a+b), size=1){
 	sum <- 0;
 	profit <- c(1:size);
 
-	k<-0
+	k<-0;
 	repeat{
-		i <- 2
-		j <- 2
-		k <- k + 1
-		L <- 1
-		A <- floor(runif(1,min=-1,max=2))
-		B <- floor(runif(1,min=-1,max=2))
-		h <- A-B
+		i <- 2;
+		j <- 2;
+		k <- k + 1;
+		L <- 1;
+		A <- floor(runif(1,min=-1,max=2));
+		B <- floor(runif(1,min=-1,max=2));
+		h <- A - B;
 		if(h<0){
-			L <- 3
+			L <- 3;
 		}else if(h==0){
-			L <- 2
+			L <- 2;
 		}
 
 		if(A>0){
-			i<-1
+			i <- 1;
 		}
 		if(B>0){
-			j<-1
+			j <- 1;
 		}		
 
 		if(rbinom(1,1,p)==1){
-			i<-1
+			i <- 1;
 		}
 
 		if(rbinom(1,1,p)==1){
-			j<-1
+			j <- 1;
 		}
 
-		profit[k] <- util[i,j,L]
+		profit[k] <- util[i,j,L];
 		if(k == size){
-			break
+			break;
 		}
 	}
-	return(profit)
+	return(profit);
 }
