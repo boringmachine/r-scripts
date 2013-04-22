@@ -7,7 +7,7 @@ prob <- function(a1,a2,a3,a4){
 # a: アンティ
 # d: 不確実性に対する感度
 # t: バンクロールに対するブラフ時の追加投資額の率
-# i: バンクロールに対する投資関数f(x,d)=x**dに対する補正
+# i: 投資関数f(x,d)=x**dに対する補正
 probgame <- function(x,d,t,a,i){
     a1 <- i*(x**d)+t+a;
     a2 <- a;
