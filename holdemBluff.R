@@ -4,7 +4,7 @@ prob <- function(a1,a2,a3,a4){
 }
 
 # x: 勝率
-# a: ポット
+# a: アンティ
 # d: 不確実性に対する感度
 # t: バンクロールに対するブラフ時の追加投資額の率
 probgame <- function(x,d,t,a){
