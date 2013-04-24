@@ -7,14 +7,24 @@ prob <- function(a1,a2,a3,a4){
 # if win y = 1 else y = 0
 # X = w*u*y + l*u*(1-y)
 # E(X) = w*u*x + l*u*(1-x)
-# w = (n-1), l = -1, u = v/b
-# n = 2
-# if bluff v/b = (i*(x^d)+t+a)*(2*x-1)*j + a*(1-j)
+#
+# w = (n-1), l = -1, u = v/b, n = 2
+#
+# define: 
+#   u := i*(x^d)
+#   bluff is betting u+t
+#
+# if bluff X' = (u+t+a)*(2*x-1)*j + a*(1-j)
 #   if enemy  is fold j=0 else j=1
-# else v/b = (i*(x^d)+a)*(2*x-1)*k - a*(1-k)
+# else X' = (u+a)*(2*x-1)*k - a*(1-k)
 #   if player is fold k=0 else k=1
 #   
 # objective: P(j=0) = P(k=0)
+# conditions:
+#   0 <= u <= 1
+#   0 <= x <= 1
+#   0 <= a <= 1
+#   0 <= t <= 1
 #
 # y: 勝敗の0-1変数
 # j: 敵のフォルドの0-1変数
