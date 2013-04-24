@@ -16,7 +16,7 @@ prob <- function(a1,a2,a3,a4){
 #
 # if bluff X' = (u+t+a)*(2*x-1)*j + a*(1-j)
 #   if enemy  is fold j=0 else j=1
-# else X' = (u+a)*(2*x-1)*k - a*(1-k)
+# else X'' = (u+a)*(2*x-1)*k - a*(1-k)
 #   if player is fold k=0 else k=1
 #   
 # objective: P(j=0) = P(k=0)
