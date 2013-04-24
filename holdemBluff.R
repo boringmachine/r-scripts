@@ -8,9 +8,10 @@ prob <- function(a1,a2,a3,a4){
 # X = w*u*y + l*u*(1-y)
 # E(X) = w*u*x + l*u*(1-x)
 # w = (n-1), l = -1, u = v/b
-# if bluff v/b = (i*(x^d)+t+a)*j + a*(1-j)
+# n = 2
+# if bluff v/b = (i*(x^d)+t+a)*(2*x-1)*j + a*(1-j)
 #   if enemy  is fold j=0 else j=1
-# else v/b = (i*(x^d)+a)*k - a*(1-k)
+# else v/b = (i*(x^d)+a)*(2*x-1)*k - a*(1-k)
 #   if player is fold k=0 else k=1
 #   
 # objective: P(j=0) = P(k=0)
